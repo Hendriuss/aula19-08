@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: verdana,sans-serif;
+    background-color: #ffbea4;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
