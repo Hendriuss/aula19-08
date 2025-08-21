@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>fORMULARIO</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1 id="titulo">Cadastro de Usuarios</h1>  
-    
-    <label for="nome">Nome:</label>
-    <input type="text" name="" id="nome" placeholder="Digite seu nome aqui">
-    <label for="email">E-mail</label>
-    <input type="email" name="" id="email" placeholder="Digite seu e-mail aqui">
 
-    <button>ENVIAR</button>
+<body>
+    <header>
+        <h1 id="titulo">Cadastro de Usuarios</h1>
+    </header>
+
+    <main>
+        <section>
+            <form id="CadastroForm">
+
+
+                <label for="nome">Nome:</label>
+                <input type="text" name="" id="nome" placeholder="Digite seu nome aqui">
+                <label for="email">E-mail</label>
+                <input type="email" name="" id="email" placeholder="Digite seu e-mail aqui">
+
+                <label for="senha">Senha</label>
+                <input type="password" name="" id="senha" placeholder="Digite sua senha " required>
+
+
+                <button type="submit">ENVIAR</button>
+            </form>
+        </section>
+        <section>
+            <p id="mensagem"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;Criado por Hendrius</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('cadastrarForm');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            document.getElementById('mensagem').textContent = "Bem vindo, " + nome + "! Seu cadastro foi realizado"
+
+        });
+    </script>
 </body>
+
 </html>
